@@ -1,0 +1,21 @@
+name: "RebuildWidget"
+version: 0.1
+description: '<__trans phrase="PLUGIN_DESC">'
+author_name: "ideaman's Inc."
+author_link: http://www.ideamans.com/
+# l10n_class: MT::Template::LayoutSlot::L10N
+id: RebuildWidget
+l10n_lexicon:
+  en_us:
+    PLUGIN_DESC: Puts rebuild dialog as a widget.
+  ja_jp:
+    PLUGIN_DESC: 再構築ダイアログをウィジェットとして配置します
+    Rebuild: 再構築
+
+applications:
+  cms:
+    callbacks:
+      template_param.rebuild_confirm: MT::CMS::RebuildWidget::on_template_param_rebuild_popup
+      template_param.rebuilding: MT::CMS::RebuildWidget::on_template_param_rebuild_popup
+      template_param.rebuilt: MT::CMS::RebuildWidget::on_template_param_rebuild_popup
+      template_param.edit_template: MT::CMS::RebuildWidget::on_template_param_edit_template
